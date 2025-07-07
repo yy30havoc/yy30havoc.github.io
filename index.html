@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给傅竞的一封信</title>
+    <style>
+        body {
+            font-family: 'LXGW WenKai', 'Microsoft YaHei', sans-serif;
+            background-color: #f8f3e9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .envelope {
+            width: 90%;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .envelope-closed {
+            height: 300px;
+            background: linear-gradient(135deg, #f5e8df 0%, #e3c9b8 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .envelope-open {
+            height: auto;
+            min-height: 300px;
+            cursor: auto;
+        }
+        
+        .envelope-flap {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 40px;
+            background: #d9b8a5;
+            clip-path: polygon(0 0, 50% 50%, 100% 0);
+            transition: all 0.3s ease;
+        }
+        
+        .envelope-open .envelope-flap {
+            transform: rotate(180deg);
+            top: -20px;
+        }
+        
+        .seal {
+            width: 60px;
+            height: 60px;
+            background: #c88a6e;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 14px;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .letter {
+            padding: 30px;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .envelope-open .letter {
+            display: block;
+            opacity: 1;
+        }
+        
+        .closed-text {
+            font-size: 18px;
+            color: #6d4c41;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #5d4037;
+        }
+        
+        .signature {
+            text-align: right;
+            margin-top: 40px;
+            font-style: italic;
+        }
+        
+        .date {
+            text-align: right;
+            margin-top: 10px;
+            color: #8d6e63;
+        }
+        
+        @media (max-width: 600px) {
+            .letter {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-closed" id="envelopeClosed">
+                <div class="seal">傅竞<br>亲启</div>
+                <div class="closed-text">点击信封展开信件</div>
+            </div>
+            <div class="letter" id="letter">
+                <h1>亲爱的傅竞：</h1>
+                
+                <!-- 这里粘贴你最终修改好的信件内容 -->
+                <p>展信佳。</p>
+                
+                <p>首先当然是祝你20岁生日快乐！这20年的辛苦，只有你自己清楚。能陪你走过最艰难的几年，是我的幸运。7月5号那天，听到你说在你最难的时候，是我给了你支持，我心里挺复杂的。为自己能帮助到你感到高兴，也为你经受那些痛苦感到不公，感到难过。不过，还是要恭喜你，你在变好，越来越好，你正朝着光的方向生长，这比什么都重要。</p>
+                
+                <p>我们的故事始于一场奇妙的“敌对”。我记得你说，我们第一次认识是在提前批之前，那时候的我是个混蛋，是你觉得这个世界上最讨厌的人。可惜这段记忆在我脑海里早已模糊。我只记得，我们上了高一，分到了一个班，我们直接没什么交集，但却互相散发着十足的恶意，真的很奇妙，不是吗。再后来啊，到了高二，命运的齿轮开始转动，小胖让我们做了同桌。幸好有陈泽涛的掺和，我们的关系逐渐和谐。许多细节我已记不清， 只记得我们越走越近，你向我袒露你的焦虑，而我笨拙地试图理解，却总隔着一层雾。我们也曾争吵、冷战，又莫名其妙地和好。说来惭愧，我那时很想去理解，却发现难以共情。我只庆幸，几次争吵没有影响我们的关系，我们争吵，又和好，分坐两边，又做回同桌。我们小声的蛐蛐班上的同学，轻轻的讨论阿仪和狗轩对飞哥座位的吵闹，有一天的晚读我记忆犹新，狗轩在后面悄悄讨论高三女生的排名，被你听到了，你直接甩了一个白眼，说了声下头，真的很好笑。如今想来，竟成了记忆里最清脆的声响。</p>
+                
+                <p>再后来啊，就是首考，你没考好，压力很大。在最后那个学期里，你总是晚二下课就离开。你告诉我，你总是在半路就下车，然后跑回家。我真的很佩服你。快高考的时候，可恶的徐东停掉了我们的体育课，有一次让它变成了去操场的集体活动。那我当然不服。于是，我就带着你去了揽月楼，在一楼的竞赛教室，打了一整节课的乒乓球。在我的记忆里，那节课很多人都翘了，可能是觉得黎黎当班主任好欺负吧。下课后，我们回了教室，黎黎带着同学也刚好回来，我还记得，她看到我的第一句话就是，宋易洋，你给我滚到前面来！当然，不是生气，没有责备，只是嗔怒，叫我去发作业。我记得，我和你打过很多次乒乓球，有在体育馆，有在揽月楼，我能感觉到，你在打乒乓球的时候总是开心的，我也是。</p>
+
+                <p>剩下的事情我也记不大清了，没有刻意遗忘，但也没有刻意回忆，也就忘掉了。好在我们有微信，我也没有删聊天记录的习惯，所以我就去看了看。23年的1月25日，我加了你的微信，你上来第一句话就是“你妈嘞”，然后我说，我妈是你外婆，你说是狼外婆，多幼稚的开场。我不记得发生了什么，因为QQ的聊天记录已经全没了。然后，就是高考结束。我们还没来得及一起玩，就是高考出分，你去了上海。7月19日，分数线出来了，你去了哈工大。那天，你还在上海，我还在学雅思。你中午给我打电话，哭了好久，说你不想去那鬼地方。我握着手机词穷得像个哑巴，只能听着你的哭声在电流里碎成一片。再后来，就是各自忙碌的假期，混乱的开学，我们时常联系，偶尔互为安慰。不过，第一个学期的联系并不频繁，我只知道你错失了牛剑，往返北京考试的机票，那个喜欢PUA的老师也没给你报销。很快就到了寒假。寒假你告诉我，你放弃了帝国理工，你和室友关系很不好。开学后，你出去租了一个月的房，却住了几天就搬了回去。很快，我们就一起去了大连，那是很愉快的五一假期，我戒断了很久。大连回来一个月，我们又计划起了下一次旅行，跨越赤道，到了印尼，那是我这辈子最棒的旅行。那趟旅行后，我们突然变得无话不谈，分享的欲望像野草一样疯长。我们开始频繁的联系，频繁到几乎每天。也就是那时，我逐渐习惯了你的存在，习惯了遇到开心的，伤心的，讨厌的，难过的事情，第一个跟你说。后来啊，我们成为了最知心的朋友，我开始理解你的喜怒哀乐，开始为你的开心感到开心，为你的难过感到难过。我也可以肆无忌惮的，毫无保留的，告诉你我的一切心事。前两个月你告诉我，你遇到了特别好的心理咨询师，逐渐解开了多年的原生家庭的心结，我别提有多开心了。</p>
+                
+                <p>不知不觉，我就写了这么多。我想，与其说是写给20岁的你的一封信，这更像是写给20岁的自己的一篇回忆录。这封信是我最炽热的青春的索引—— 因为你几乎见证了我这三年的一切。黑塞说：“但从此我们再也没有相逢，被你改变的那部分的我，会代替你，永远陪伴我。”5号那天，你说是我出现在你最难受的时候，叫你出去玩。可你知道吗？正是那个愿意向我露出软肋的你，教会了我如何真正地陪伴一个人。我真的很感恩能见证你这些年和自己的逐渐和解，我也期待终有一天，或许是我们再次见面时，能见到一个健康的，不再被焦虑和抑郁困扰的你。</p>
+
+                <p>现在的我终于明白，有些关系之所以珍贵，正是因为它无法被任何标签定义。 我不会再试图抓住什么，就像山林从不向四季起誓，荣枯随缘。或许未来某天，我们会带着各自的伴侣重逢，指着对方笑骂“这就是当年和我互说宫寒的家伙”， 又或者，我们依然会在凌晨两点互发“你怎么还不睡”。 无论怎样，你永远是我敢肆无忌惮袒露脆弱的人，是我人生旅行里最特别的队友。</p>
+
+                <p>最后，许个贪心的愿望—— 希望20岁的你少些午夜惊醒的焦虑，多些“突然被世界偏爱”的瞬间。如果哪天你想去北极看极光，记得给我留个位置。</p>
+
+                <p>生日快乐，勿念。</p>
+                
+                <div class="signature">宋易洋</div>
+                <div class="date">2025年7月9日</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const envelope = document.getElementById('envelope');
+        const envelopeClosed = document.getElementById('envelopeClosed');
+        const letter = document.getElementById('letter');
+        
+        envelope.addEventListener('click', function() {
+            if (!this.classList.contains('envelope-open')) {
+                this.classList.add('envelope-open');
+                
+                // 滚动到信的开头
+                setTimeout(() => {
+                    window.scrollTo({
+                        top: envelope.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }, 500);
+            }
+        });
+        
+        // 防止点击信件内容时触发折叠
+        letter.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    </script>
+</body>
+</html>
